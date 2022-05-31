@@ -6,6 +6,9 @@ public class UserCreateRequest
 {
 
     [Required]
+    public string Username { get; set; }
+
+    [Required]
     public string Name { get; set; }
 
     

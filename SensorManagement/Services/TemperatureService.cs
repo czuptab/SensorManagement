@@ -3,6 +3,7 @@
 using AutoMapper;
 using SensorManagement.Helpers;
 using SensorManagement.Models.Temperature;
+using System.Collections.Generic;
 
 public class TemperatureService : ISensorService
 {
@@ -17,8 +18,14 @@ public class TemperatureService : ISensorService
         _mapper = mapper;
     }
 
-    public void Create(TemperatureCreateRequest model)
+    public IEnumerable<TemperatureLog> GetAll()
     {
+        return _context.Temperatures;
+    }
+
+    public void Create(long sensorId, TemperatureCreateRequest model)
+    {
+
         var log = _mapper.Map<TemperatureLog>(model);
 
         _context.Temperatures.Add(log);

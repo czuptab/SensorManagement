@@ -4,5 +4,6 @@ using SensorManagement.Models.Temperature;
 
 public interface ISensorService
 {
-    void Create(TemperatureCreateRequest model);
+    IEnumerable<TemperatureLog> GetAll();
+    void Create(long sensorId, TemperatureCreateRequest model);
 }

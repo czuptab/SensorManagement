@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 public class UserUpdateRequest
 {
+    public string Username { get; set; }
     public string Name { get; set; }
 
     [EnumDataType(typeof(Role))]

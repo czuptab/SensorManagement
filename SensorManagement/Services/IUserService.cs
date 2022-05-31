@@ -9,5 +9,6 @@ namespace SensorManagement.Services
         void Create(UserCreateRequest model);
         void Update(int id, UserUpdateRequest model);
         void Delete(int id);
+        UserAuthenticateResponse Authenticate(UserAuthenticateRequest model);
     }
 }
