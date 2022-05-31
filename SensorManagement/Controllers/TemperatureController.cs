@@ -9,7 +9,7 @@ namespace SensorManagement.Controllers
 {
     [Authorize]
     [ApiController]
-    [Route("[controller]/temperature")]
+    [Route("api/temperature")]
     public class TemperatureController : ControllerBase
     {
         private ISensorService _temperatureService;

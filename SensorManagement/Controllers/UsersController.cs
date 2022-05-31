@@ -8,7 +8,7 @@ using SensorManagement.Services;
 
 [Authorize]
 [ApiController]
-[Route("[controller]/users")]
+[Route("api/users")]
 public class UsersController : ControllerBase
 {
     private IUserService _userService;

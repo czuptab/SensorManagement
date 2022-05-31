@@ -8,7 +8,7 @@ namespace SensorManagement.Controllers
 {
     [Authorize]
     [ApiController]
-    [Route("[controller]/report")]
+    [Route("api/report")]
     public class ReportController : ControllerBase
     {
         private IReportService _reportService;
