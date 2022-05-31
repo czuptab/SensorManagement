@@ -27,6 +27,7 @@ var builder = WebApplication.CreateBuilder(args);
     services.AddScoped<IJwtUtils, JwtUtils>();
     services.AddScoped<IUserService, UserService>();
     services.AddScoped<ISensorService, TemperatureService>();
+    services.AddScoped<IReportService, ReportService>();
 }
 
 builder.Services.AddControllers();
