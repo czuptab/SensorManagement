@@ -25,8 +25,8 @@ public class TemperatureService : ISensorService
 
     public void Create(long sensorId, TemperatureCreateRequest model)
     {
-
         var log = _mapper.Map<TemperatureLog>(model);
+        log.CreatedBy = sensorId;
 
         _context.Temperatures.Add(log);
         _context.SaveChanges();
